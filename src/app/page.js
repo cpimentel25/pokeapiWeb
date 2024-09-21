@@ -134,19 +134,19 @@ export default function Home() {
         style={{
           display: "flex",
           justifyContent: "center",
-          alignItems: "center",
           marginTop: "50px",
           padding: "10px",
           width: "800px",
           height: "600px",
           overflowY: "auto",
           border: "1px solid #ccc",
+          boxSizing: "border-box",
         }}
       >
         {inputError && <p style={{ color: "red" }}>{inputError}</p>}
         {error && <p style={{ color: "red" }}>{error}</p>}
         {data && !inputError && (
-          <pre style={{ whiteSpace: "pre-wrap" }}>
+          <pre style={{ whiteSpace: "pre-wrap", margin: 0, padding: '10px' }}>
             {JSON.stringify(data, null, 2)}
           </pre>
         )}
